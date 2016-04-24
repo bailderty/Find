@@ -1,0 +1,10 @@
+According to [Bjarne] Stroustrup: "the name signifies the evolutionary
+nature of the changes from C". This name is credited to Rick Mascitti
+When Mascitti was questioned informally in 1992 about the naming, he
+from C's "++" operator (which increments the value of a variable) and a
+program. A joke goes that the name itself has a bug: due to the use of
+post-increment, which increments the value of the variable but evaluates
+to the unincremented value, C++ is no better than C, and the pre-increment
+During C++'s development period, the language had been referred to as
+"new C", then "C with Classes", before acquiring its final name.
+-- from the Wikipedia entry on "C++", Section 1.1: Etymology
