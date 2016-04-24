@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  findWord.cpp
 //  Find
 //
 //  Created by Brett Meyer on 4/24/16.
@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <stdlib.h>
 using namespace std;
 
 int main (int argc, char* argv[]) {
