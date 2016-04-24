@@ -5,21 +5,9 @@
 //  Created by Brett Meyer on 4/24/16.
 //  Copyright © 2016 Brett Meyer. All rights reserved.
 //
-
-#include <iostream>
-//
-//  main.cpp
-//  studentdb
-//
-//  Created by Brett Meyer on 3/19/16.
-//  Copyright © 2016 BDM. All rights reserved.
-//
-// reading a text file
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <vector>
-#include <sstream>
 using namespace std;
 
 int main (int argc, char* argv[]) {
@@ -40,6 +28,7 @@ int main (int argc, char* argv[]) {
     ifstream myfile;
     int counter = 1;
     int findCounter = 0;
+    bool print = false;
     
     //get input file name
     myfile.open(argv[2]);
@@ -52,7 +41,7 @@ int main (int argc, char* argv[]) {
         while (getline(myfile,line))
         {
             int k = 0;
-            cout << counter << " : " << line << endl;
+            print = false;
             for (int i = 0; i < line.size(); i++)
             {
                 if (subStr[k] == line[i])
@@ -60,6 +49,7 @@ int main (int argc, char* argv[]) {
                     if (k == subStr.size() - 1)
                     {
                         findCounter++;
+                        print = true;
                     }
                     else
                     {
@@ -72,7 +62,11 @@ int main (int argc, char* argv[]) {
                     k = 0;
                 }
             }
-            
+            if (print == true)
+            {
+                cout << counter << " : " << line << endl;
+            }
+            counter++;
         }
         cout << "# occurrences of '" << argv[1] << "' = " << findCounter << endl;
         //close file
@@ -81,7 +75,7 @@ int main (int argc, char* argv[]) {
     //unable to open file
     else
     {
-        cout << "Unable to open file";
+        cout << "File '" << argv[2] << "' could not be opened" << endl;
     }
     
 }

@@ -1,10 +1,10 @@
 CC = g++
 
-all: main.o
-	$(CC) -o runMain $?
+all: findWord.o
+	$(CC) -o findWord $?
 
-main.o: main.cpp
+main.o: findWord.cpp
 	$(CC) -c $?
 
 clean:
-	rm -f *.o runMain
+	rm -f *.o findWord
